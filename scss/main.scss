@@ -1,0 +1,114 @@
+button {
+  border: none;
+  background-color: inherit;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+#main {
+  #mainVisual {
+    position: relative;
+    .swiper-wrapper {
+      .swiper-slide {
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+      }
+      .visual01 {
+        background-image: url(../images/main/bg1.jpg);
+      }
+      .visual02 {
+        background-image: url(../images/main/bg2.jpg);
+      }
+      .visual03 {
+        background-image: url(../images/main/bg3.jpg);
+      }
+    }
+    .slogan {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+      h2 {
+        font-size: 60px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 40px;
+      }
+      a {
+        padding: 10px 20px;
+        border: 1px solid #fff;
+        font-weight: 500;
+        border-radius: 100px;
+      }
+    }
+  }
+  // mainVisual end
+  #mainContents {
+    position: relative;
+    .txtbox {
+      position: absolute;
+      top: 50px;
+      left: 15px;
+      z-index: 2;
+      h2 {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+    .mainList {
+      li {
+        display: flex;
+        width: 33.3333%;
+        height: 100vh;
+        position: relative;
+        .bg {
+          width: 100%;
+          background-position: 50%;
+          background-size: cover;
+          &:nth-of-type(1) {
+            background-image: url(../images/main/slide_img_1.png);
+          }
+          &:nth-of-type(2) {
+            background-image: url(../images/main/slide_img_2.png);
+          }
+          &:nth-of-type(3) {
+            background-image: url(../images/main/slide_img_3.png);
+          }
+          &:nth-of-type(4) {
+            background-image: url(../images/main/slide_img_4.png);
+          }
+          &:nth-of-type(5) {
+            background-image: url(../images/main/slide_img_5.png);
+          }
+          &:nth-of-type(6) {
+            background-image: url(../images/main/slide_img_6.png);
+          }
+        }
+        .link {
+          position: absolute;
+          padding: 5px 20px;
+          border: 1px solid;
+          border-radius: 100px;
+          right: 50px;
+          bottom: 60px;
+        }
+      }
+    }
+  }
+}
