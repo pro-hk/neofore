@@ -1,106 +1,137 @@
 @import "vars";
-@import "mixin";
+@import "mixins";
+
+.titleBox {
+  line-height: 1.5;
+
+  h2 {
+    margin-bottom: 50px;
+    font-size: $h2;
+    font-weight: 600;
+  }
+  p {
+    font-size: $medium-size;
+  }
+}
 
 #main {
   #mainVisual {
-    position: relative;
-    ul {
-      li {
-        height: 100vh;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        &.visual01 {
-          background-image: url(../images/main/bg1.jpg);
-        }
-        &.visual02 {
-          background-image: url(../images/main/bg2.jpg);
-        }
-        &.visual03 {
-          background-image: url(../images/main/bg3.jpg);
-        }
+    li {
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      &.visual01 {
+        background-image: url(../images/main/bg1.jpg);
+      }
+      &.visual02 {
+        background-image: url(../images/main/bg2.jpg);
+      }
+      &.visual03 {
+        background-image: url(../images/main/bg3.jpg);
       }
     }
     .slogan {
       position: absolute;
-      left: 50%;
       top: 50%;
-      transform: translate(-50%, -50%);
+      left: 50%;
+      z-index: 5;
+      color: $white-color;
       text-align: center;
-      color: #fff;
-      h2 {
-        font-size: 60px;
+      transform: translate(-50%, -50%);
+      .main {
+        font-size: $xx-large-size;
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
         font-weight: 700;
-        margin-bottom: 20px;
       }
-      p {
-        font-size: 20px;
-        font-weight: 500;
-        margin-bottom: 40px;
+      .sub {
+        margin-top: 3rem;
+        font-size: $large-size;
       }
       a {
-        padding: 10px 20px;
-        border: 1px solid #fff;
-        font-weight: 500;
+        display: inline-flex;
+        margin-top: 5rem;
+        padding: 20px 40px;
+        border: 1px solid $white-color;
+        transition: 0.25s;
+        align-items: center;
         border-radius: 100px;
+        &:hover {
+          color: $white-color;
+          background-color: $main-color;
+          border-color: $main-color;
+          span {
+            color: $white-color;
+          }
+        }
+        span {
+          margin-left: 2rem;
+          color: $main-color;
+        }
+      }
+      .pagination {
+        margin-top: 40px;
+        .swiper-pagination-bullet {
+          width: 15px;
+          height: 15px;
+          background: none;
+          border: 2px solid $white-color;
+          opacity: 1;
+          transition: 0.25s;
+          border-radius: 100px;
+          &-active {
+            width: 80px;
+            background-color: $white-color;
+          }
+        }
       }
     }
   }
   // mainVisual end
-  #mainContents {
+  #product {
+    overflow: hidden;
     position: relative;
-    .txtbox {
+    .titleBox {
       position: absolute;
       top: 50px;
       left: 15px;
       z-index: 2;
-      h2 {
-        font-size: 30px;
-        font-weight: 700;
-        line-height: 1.5;
-        margin-bottom: 20px;
-      }
-      p {
-        font-size: 14px;
-        font-weight: 500;
-      }
     }
-    .mainList {
+    .list {
       li {
-        display: flex;
-        width: 33.3333%;
-        height: 100vh;
         position: relative;
-        .bg {
-          width: 100%;
-          background-position: 50%;
-          background-size: cover;
-          &:nth-of-type(1) {
-            background-image: url(../images/main/slide_img_1.png);
+        a {
+          position: absolute;
+          right: 50px;
+          bottom: 50px;
+          padding: 15px 30px;
+          border: 1px solid $white-color;
+          border-radius: 100px;
+          @include flexCenter();
+          transition: 0.25s;
+          span {
+            margin-left: 20px;
+            color: $main-color;
           }
-          &:nth-of-type(2) {
-            background-image: url(../images/main/slide_img_2.png);
-          }
-          &:nth-of-type(3) {
-            background-image: url(../images/main/slide_img_3.png);
-          }
-          &:nth-of-type(4) {
-            background-image: url(../images/main/slide_img_4.png);
-          }
-          &:nth-of-type(5) {
-            background-image: url(../images/main/slide_img_5.png);
-          }
-          &:nth-of-type(6) {
-            background-image: url(../images/main/slide_img_6.png);
+          &:hover {
+            background-color: $text-color;
+            color: $white-color;
           }
         }
-        .link {
-          position: absolute;
-          padding: 5px 20px;
-          border: 1px solid;
-          border-radius: 100px;
-          right: 50px;
-          bottom: 60px;
+      }
+    }
+    .btns {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      display: flex;
+      button {
+        @include box(100px);
+        background-color: $white-color;
+        @include flexCenter();
+        span {
+          font-size: $x-large-size;
         }
       }
     }

@@ -39,3 +39,9 @@
 }
 
 //f(x,y)
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
