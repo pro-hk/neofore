@@ -229,3 +229,51 @@ button {
     }
   }
 }
+// header end
+
+#footer {
+  margin-top: 100px;
+  padding: 50px 0;
+  background-color: $light-gray-color;
+  .contents {
+    width: 1440px;
+    margin: auto;
+    position: relative;
+    font-size: $normal-size;
+    .addressBox {
+      color: #999;
+      .logo {
+        margin-bottom: 30px;
+      }
+      address {
+        .info {
+          position: relative;
+          a {
+            font-weight: 700;
+          }
+        }
+        .info * {
+          margin-right: 10px;
+        }
+        .copyright {
+          margin-top: 20px;
+        }
+      }
+    }
+    .link {
+      position: absolute;
+      right: 0;
+      top: 0;
+      border-radius: 100px;
+      padding: 10px 20px;
+      background-color: $text-color;
+      color: $white-color;
+      display: flex;
+      align-items: center;
+      span {
+        color: #999;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

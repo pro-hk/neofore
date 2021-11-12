@@ -13,6 +13,33 @@
     font-size: $medium-size;
   }
 }
+.btns {
+  display: flex;
+  justify-content: center;
+  .btn {
+    display: flex;
+    &.center {
+      justify-content: center;
+    }
+    &.right {
+      justify-content: flex-end;
+    }
+    border: 1px solid $border-color;
+    border-radius: 100px;
+    @include flexCenter();
+    transition: 0.25s;
+  }
+  .transition:hover {
+    background-color: $text-color;
+    border-color: $text-color;
+    color: $white-color;
+  }
+  .large {
+    height: 60px;
+    padding: 0 50px;
+  }
+}
+// 버튼은 크기가 일정
 
 #main {
   #mainVisual {
@@ -106,33 +133,172 @@
           bottom: 50px;
           padding: 15px 30px;
           border: 1px solid $white-color;
+          transition: 0.25s;
           border-radius: 100px;
           @include flexCenter();
-          transition: 0.25s;
           span {
             margin-left: 20px;
             color: $main-color;
           }
           &:hover {
-            background-color: $text-color;
             color: $white-color;
+            background-color: $text-color;
           }
         }
       }
     }
     .btns {
+      display: flex;
       position: absolute;
       bottom: 0;
       left: 0;
       z-index: 2;
-      display: flex;
       button {
-        @include box(100px);
         background-color: $white-color;
+        border-radius: 0;
+        border: none;
+        @include box(100px);
         @include flexCenter();
         span {
           font-size: $x-large-size;
         }
+      }
+    }
+  }
+  // product end
+  #news {
+    padding: 100px 0;
+    .contents {
+      width: 1440px;
+      margin: auto;
+      .list {
+        display: flex;
+        justify-content: space-between;
+        li {
+          width: 31.33%;
+          margin-top: 50px;
+          a {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid $light-gray-color;
+            border-radius: 20px;
+            transition: 0.25s;
+            &:hover {
+              box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+              .img {
+                transform: scale(1.1);
+              }
+              .txtBox {
+                bottom: 0;
+              }
+            }
+            &::before {
+              content: "";
+              display: block;
+              padding-top: 80%;
+            }
+            // padding-top: 100% -> width의 100%(정사각형) - 반응형에 씀
+            .img {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              background-repeat: no-repeat;
+              background-position: 50%;
+              background-size: cover;
+              transition: 0.25s;
+            }
+            .txtBox {
+              position: absolute;
+              left: 0;
+              bottom: -50px;
+              width: 100%;
+              background-color: $white-color;
+              padding: 30px;
+              box-sizing: border-box;
+              transition: 0.25s;
+              h3 {
+                font-size: $h3;
+                @include multiEllipsis();
+                margin-bottom: 30px;
+              }
+              .date {
+                margin-bottom: 30px;
+              }
+              .txt {
+                @include ellipsis();
+              }
+            }
+          }
+        }
+      }
+      .btns {
+        margin-top: 50px;
+      }
+    }
+  }
+  // news end
+  #cs {
+    .contents {
+      width: 1440px;
+      margin: auto;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+          width: 49%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 10px;
+          overflow: hidden;
+          &:nth-child(1) {
+            background-image: url(../images/main/bg_contact.jpg);
+          }
+          &:nth-child(2) {
+            background-image: url(../images/main/bg_charge.jpg);
+          }
+          a {
+            display: flex;
+            height: 150px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+            .txtBox {
+              color: $white-color;
+              strong {
+                font-size: $large-size;
+                display: block;
+                margin-bottom: 10px;
+              }
+            }
+            .btn {
+              @include flexCenter();
+              background-color: $text-color;
+              color: $white-color;
+              padding: 10px 20px;
+              border-radius: 100px;
+              font-size: $normal-size;
+              span {
+                color: $main-color;
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // cs end
+}
+// main end
+
+@media screen and (max-width: 1440px) {
+  #main {
+    #news {
+      .contents {
+        width: 100%;
       }
     }
   }
