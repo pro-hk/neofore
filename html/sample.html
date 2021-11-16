@@ -1,0 +1,104 @@
+<? include("../include/header.html") ?>
+<main id="main">
+  <div class="container">
+    <div class="head">
+      <div class="location">
+        <span class="material-icons"> home </span>
+        <a href="">고객지원</a>
+        <a href="">샘플신청</a>
+      </div>
+      <h2>고객 지원</h2>
+      <ul class="list">
+        <li><a href="">FAQ</a></li>
+        <li><a href="">온라인 문의</a></li>
+        <li><a href="">담당자 연락처</a></li>
+        <li><a href="">제품 카탈로그</a></li>
+        <li><a href="">샘플신청</a></li>
+      </ul>
+    </div>
+    <div class="contents">
+      <p>
+        신청 내용에 개인 정보를 기재하시는 경우, 답변 완료 후 임의로 삭제될 수 있사오니 개인 정보 기재는 삼가주세요.<br />
+        <span class="require">*</span> 항목은 필수 입력항목입니다.
+      </p>
+      <table>
+        <colgroup>
+          <col style="width: 10%" />
+          <col style="width: 40%" />
+          <col style="width: 10%" />
+          <col style="width: 40%" />
+        </colgroup>
+        <tbody>
+          <tr>
+            <th>회사명<span class="require">*</span></th>
+            <td><input type="text" /></td>
+            <th class="right">이름<span class="require">*</span></th>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <th>휴대전화<span class="require">*</span></th>
+            <td><input type="text" /></td>
+            <th class="right">이메일<span class="require">*</span></th>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <th>샘플종류<span class="require">*</span></th>
+            <td>
+              <select name="" id="">
+                <option value="">샘플종류를 선택하세요.</option>
+                <option value="" class="opt">네오포레 CUP</option>
+                <option value="" class="opt">네오포레 STRAW</option>
+                <option value="" class="opt">네오포레 완충재</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>주소<span class="require">*</span></th>
+            <td class="add">
+              <input type="text" class="address search" placeholder="우편번호" />
+              <a href=""><span class="material-icons"> search </span>우편번호 검색</a>
+            </td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><input type="text" class="address" placeholder="주소" /></td>
+            <td colspan="2" cla><input type="text" class="otherAddress" placeholder="나머지 주소 입력" /></td>
+          </tr>
+          <tr>
+            <th>제목<span class="require">*</span></th>
+            <td colspan="3"><input type="text" /></td>
+          </tr>
+          <tr>
+            <th class="content">내용<span class="require">*</span></th>
+            <td colspan="3"><textarea name="" id="" cols="30" rows="10"></textarea></td>
+          </tr>
+          <tr>
+            <th>첨부파일</th>
+            <td colspan="3">
+              <div class="flex">
+                <input type="text" class="address" placeholder="총 5MB 문서와 이미지 파일만 첨부 가능합니다." />
+                <input type="file" />
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="bottom">
+        <ul>
+          <li>
+            <input type="checkbox" id="agree" />
+            <label for="agree">개인정보 수집에 동의합니다. <span>전문 보기</span></label>
+          </li>
+          <li>
+            <input type="checkbox" id="age" />
+            <label for="age">만 14세 이상입니다.</label>
+          </li>
+        </ul>
+        <div class="btns">
+          <button>확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<? include("../include/footer.html") ?>

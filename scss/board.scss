@@ -1,0 +1,179 @@
+@import "vars";
+@import "mixins";
+
+.container {
+  margin: 0 auto;
+  width: 1440px;
+  .head {
+    padding-top: 200px;
+    .location {
+      display: flex;
+      align-items: center;
+      color: $border-color;
+      margin-bottom: 20px;
+      span,
+      a {
+        font-size: $normal-size;
+        margin-right: 20px;
+        position: relative;
+        &:after {
+          content: ">";
+          position: absolute;
+          right: -15px;
+          top: -2px;
+        }
+      }
+      a:nth-of-type(2) {
+        text-decoration: underline;
+        &:after {
+          display: none;
+        }
+      }
+    }
+    h2 {
+      font-size: $x-large-size;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+    .list {
+      display: flex;
+      margin-bottom: 100px;
+      li {
+        padding: 10px 20px;
+        color: $border-color;
+        border-radius: 100px;
+        color: $border-color;
+        transition: 0.25s;
+        &:last-child {
+          color: $white-color;
+          background-color: $main-color;
+        }
+        &:hover {
+          background-color: $light-gray-color;
+          &:last-child {
+            color: $border-color;
+          }
+        }
+      }
+    }
+  }
+  .contents {
+    color: $border-color;
+    border-top: 2px solid #000;
+    .require {
+      color: red;
+    }
+    p {
+      padding: 20px 0;
+      line-height: 2;
+    }
+    table {
+      margin-top: 30px;
+      width: 100%;
+      tr {
+        height: 90px;
+        th {
+          text-align: left;
+          &.right {
+            text-align: center;
+          }
+        }
+      }
+      td {
+        &.add {
+          display: flex;
+          a {
+            @include flexCenter();
+            width: 220px;
+            border: 1px solid $border-color;
+            border-radius: 100px;
+            color: $text-color;
+            span {
+              margin-right: 5px;
+              color: $main-color;
+            }
+          }
+        }
+        .flex {
+          border-top: 40px solid $white-color;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          input[type="file"] {
+            width: 90px;
+          }
+        }
+        input[type="text"] {
+          width: 100%;
+          box-sizing: border-box;
+          border: none;
+          border-bottom: 1px solid $border-color;
+          padding: 10px;
+          transition: 0.25s;
+          &.address {
+            background-color: $border-color;
+            border-radius: 5px;
+            font-weight: 600;
+            padding: 20px;
+            margin-right: 20px;
+          }
+          &.otherAddress {
+            padding: 20px;
+            font-weight: 600;
+          }
+          &:hover {
+            border-bottom: 1px solid $text-color;
+          }
+        }
+        select {
+          width: 100%;
+          border: none;
+          border-bottom: 1px solid $border-color;
+          padding: 10px;
+        }
+        textarea {
+          width: 100%;
+          height: 300px;
+          border: none;
+          border-bottom: 1px solid $border-color;
+          &:hover {
+            border-bottom: 1px solid $text-color;
+          }
+        }
+      }
+    }
+  }
+  .bottom {
+    border-top: 1px solid $border-color;
+    margin-top: 20px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    ul {
+      li {
+        color: $border-color;
+        line-height: 1.5;
+        // input {
+        //   border: 1px solid $border-color;
+        //   &:checked {
+        //     background-color: $main-color;
+        //   }
+        // }
+        span {
+          color: $text-color;
+          text-decoration: underline;
+        }
+      }
+    }
+    .btns {
+      button {
+        background-color: $gray-color;
+        padding: 20px 40px;
+        color: $white-color;
+        border-radius: 100px;
+        font-weight: 600;
+        font-size: $medium-size;
+      }
+    }
+  }
+}

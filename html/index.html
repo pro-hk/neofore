@@ -1,266 +1,138 @@
-<!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>네오포레 - Return to forest</title>
-    <link rel="shortcut icon" href="../images/layout/favicon.png" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/swiper-bundle.css" />
-    <link rel="stylesheet" href="../css/layout.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <script src="../js/swiper-bundle.min.js"></script>
-    <script src="../js/main.js" defer></script>
-  </head>
-  <body>
-    <header id="header">
-      <div class="container">
-        <h1 id="logo">
-          <a href="#">
-            <img src="../images/layout/main_logo.png" alt="" class="white" />
-            <img src="../images/layout/main_logo_color.png" alt="" class="color" />
+<? include("../include/header.html") ?>
+<main id="main">
+  <div id="mainVisual">
+    <ul class="swiper-wrapper">
+      <li class="visual01 swiper-slide"></li>
+      <li class="visual02 swiper-slide"></li>
+      <li class="visual03 swiper-slide"></li>
+    </ul>
+    <div class="slogan">
+      <p class="main">Return to forest</p>
+      <p class="sub">숲으로 돌아가는 종이, 네오포레</p>
+      <a href="#">브랜드 스토리 자세히보기<span class="material-icons">east</span></a>
+      <div class="pagination"></div>
+    </div>
+  </div>
+  <!-- mainVisual end -->
+  <article id="product">
+    <div class="titleBox">
+      <h2>
+        네오포레의<br />
+        다양한 제품을 만나보세요.
+      </h2>
+      <p>무림은 최고의 기술로 생활의 가치를 더하고 있습니다.</p>
+    </div>
+    <div class="list">
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide">
+          <img src="../images/main/slide_img_1.png" alt="" />
+          <a href="#">네오포레 CUP<span class="material-icons">east</span></a>
+        </li>
+        <li class="swiper-slide">
+          <img src="../images/main/slide_img_2.png" alt="" />
+          <a href="#">네오포레 STRAW<span class="material-icons">east</span></a>
+        </li>
+        <li class="swiper-slide">
+          <img src="../images/main/slide_img_3.png" alt="" />
+          <a href="#">네오포레 완충재<span class="material-icons">east</span></a>
+        </li>
+        <li class="swiper-slide">
+          <img src="../images/main/slide_img_4.png" alt="" />
+          <a href="#">네오포레 FLEX<span class="material-icons">east</span></a>
+        </li>
+        <li class="swiper-slide">
+          <img src="../images/main/slide_img_5.png" alt="" />
+          <a href="#">펄드 몰드<span class="material-icons">east</span></a>
+        </li>
+        <li class="swiper-slide">
+          <img src="../images/main/slide_img_6.png" alt="" />
+          <a href="#">바이오플라스틱<span class="material-icons">east</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="btns">
+      <button class="btn prev"><span class="material-icons"> navigate_before </span></button>
+      <button class="btn next"><span class="material-icons"> navigate_next </span></button>
+    </div>
+  </article>
+  <!-- product end -->
+  <article id="news">
+    <div class="contents">
+      <div class="titleBox">
+        <h2>
+          네오포레의<br />
+          다양한 소식을 만나보세요.
+        </h2>
+        <p>무림은 최고의 기술로 생활의 가치를 더하고 있습니다.</p>
+      </div>
+      <ul class="list">
+        <li>
+          <a href="">
+            <div class="img" style="background-image: url(../images/main/news01.jpg)"></div>
+            <div class="txtBox">
+              <h3>탈 플라스틱 종이컵 '네오포레' 개발</h3>
+              <p class="date">2021.11.04</p>
+              <p class="txt">무림의 친환경 경영 및 플라스틱을 대체하는 '네오포레' 시리즈(출처: 단디뉴스)</p>
+            </div>
           </a>
-        </h1>
-        <nav id="gnb">
-          <h2 class="hidden">global navigation bar</h2>
-          <ul class="list">
-            <li>
-              <a href="">네오포레</a>
-              <ul class="depth02">
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">Why 네오포레?</a></li>
-                <li><a href="">네오포레 History</a></li>
-                <li><a href="">Brand Identity</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="">제품</a>
-              <ul class="depth02">
-                <li><a href="">제품 소개</a></li>
-                <li><a href="">식품용</a></li>
-                <li><a href="">산업용</a></li>
-                <li><a href="">펄프 몰드</a></li>
-                <li><a href="">바이오플라스틱</a></li>
-                <li><a href="">신제품 개발 현황</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="">환경 인증</a>
-            </li>
-            <li>
-              <a href="">환경 경영</a>
-              <ul class="depth02">
-                <li><a href="">저탄소 공정</a></li>
-                <li><a href="">지속가능 순환 시스템</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="">제조 공정</a>
-            </li>
-            <li>
-              <a href="">PR</a>
-              <ul class="depth02">
-                <li><a href="">무림뉴스</a></li>
-                <li><a href="">영상</a></li>
-                <li><a href="">종이와 환경에 대한 진실</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="">고객지원</a>
-              <ul class="depth02">
-                <li><a href="">FAQ</a></li>
-                <li><a href="">온라인 문의</a></li>
-                <li><a href="">담당자 연락처</a></li>
-                <li><a href="">제품 카탈로그</a></li>
-                <li><a href="">샘플 신청</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-        <div class="etc">
-          <div class="sns item">
-            <button>sns</button>
-            <ul>
-              <li><a href="">카카오톡</a></li>
-              <li><a href="">네이버블로그</a></li>
-              <li><a href="">인스타그램</a></li>
-              <li><a href="">페이스북</a></li>
-              <li><a href="">유튜브</a></li>
-            </ul>
-          </div>
-          <div class="language item">
-            <button>kr</button>
-            <ul>
-              <li><a href="">kr</a></li>
-              <li><a href="">en</a></li>
-            </ul>
-          </div>
-        </div>
+        </li>
+        <li>
+          <a href="">
+            <div class="img" style="background-image: url(../images/main/news02.jpg)"></div>
+            <div class="txtBox">
+              <h3>'무림, 한솔만 A등급', 제지업계, ESG경영 '양극화' 심화</h3>
+              <p class="date">2021.10.29</p>
+              <p class="txt">'2021년 ESG평가'서 무림, 한솔 A등급, 중소형 제지사 C등급(출처: 머니투데이)</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="img" style="background-image: url(../images/main/news03.jpg)"></div>
+            <div class="txtBox">
+              <h3>친환경 가치 담은 '종이 빨대' 찾는 기업 늘었다</h3>
+              <p class="date">2021.10.08</p>
+              <p class="txt">무림, 종이 빨대 부착용 비닐도 친환경 종이로 개발 (출처: 아시아경제)</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class="btns center">
+        <a href="" class="btn large transition">네오프레 소식 더보기</a>
       </div>
-    </header>
-    <!-- header end -->
-    <main id="main">
-      <div id="mainVisual">
-        <ul class="swiper-wrapper">
-          <li class="visual01 swiper-slide"></li>
-          <li class="visual02 swiper-slide"></li>
-          <li class="visual03 swiper-slide"></li>
-        </ul>
-        <div class="slogan">
-          <p class="main">Return to forest</p>
-          <p class="sub">숲으로 돌아가는 종이, 네오포레</p>
-          <a href="#">브랜드 스토리 자세히보기<span class="material-icons">east</span></a>
-          <div class="pagination"></div>
-        </div>
-      </div>
-      <!-- mainVisual end -->
-      <article id="product">
-        <div class="titleBox">
-          <h2>
-            네오포레의<br />
-            다양한 제품을 만나보세요.
-          </h2>
-          <p>무림은 최고의 기술로 생활의 가치를 더하고 있습니다.</p>
-        </div>
-        <div class="list">
-          <ul class="swiper-wrapper">
-            <li class="swiper-slide">
-              <img src="../images/main/slide_img_1.png" alt="" />
-              <a href="#">네오포레 CUP<span class="material-icons">east</span></a>
-            </li>
-            <li class="swiper-slide">
-              <img src="../images/main/slide_img_2.png" alt="" />
-              <a href="#">네오포레 STRAW<span class="material-icons">east</span></a>
-            </li>
-            <li class="swiper-slide">
-              <img src="../images/main/slide_img_3.png" alt="" />
-              <a href="#">네오포레 완충재<span class="material-icons">east</span></a>
-            </li>
-            <li class="swiper-slide">
-              <img src="../images/main/slide_img_4.png" alt="" />
-              <a href="#">네오포레 FLEX<span class="material-icons">east</span></a>
-            </li>
-            <li class="swiper-slide">
-              <img src="../images/main/slide_img_5.png" alt="" />
-              <a href="#">펄드 몰드<span class="material-icons">east</span></a>
-            </li>
-            <li class="swiper-slide">
-              <img src="../images/main/slide_img_6.png" alt="" />
-              <a href="#">바이오플라스틱<span class="material-icons">east</span></a>
-            </li>
-          </ul>
-        </div>
-        <div class="btns">
-          <button class="btn prev"><span class="material-icons"> navigate_before </span></button>
-          <button class="btn next"><span class="material-icons"> navigate_next </span></button>
-        </div>
-      </article>
-      <!-- product end -->
-      <article id="news">
-        <div class="contents">
-          <div class="titleBox">
-            <h2>
-              네오포레의<br />
-              다양한 소식을 만나보세요.
-            </h2>
-            <p>무림은 최고의 기술로 생활의 가치를 더하고 있습니다.</p>
-          </div>
-          <ul class="list">
-            <li>
-              <a href="">
-                <div class="img" style="background-image: url(../images/main/news01.jpg)"></div>
-                <div class="txtBox">
-                  <h3>탈 플라스틱 종이컵 '네오포레' 개발</h3>
-                  <p class="date">2021.11.04</p>
-                  <p class="txt">무림의 친환경 경영 및 플라스틱을 대체하는 '네오포레' 시리즈(출처: 단디뉴스)</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div class="img" style="background-image: url(../images/main/news02.jpg)"></div>
-                <div class="txtBox">
-                  <h3>'무림, 한솔만 A등급', 제지업계, ESG경영 '양극화' 심화</h3>
-                  <p class="date">2021.10.29</p>
-                  <p class="txt">'2021년 ESG평가'서 무림, 한솔 A등급, 중소형 제지사 C등급(출처: 머니투데이)</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div class="img" style="background-image: url(../images/main/news03.jpg)"></div>
-                <div class="txtBox">
-                  <h3>친환경 가치 담은 '종이 빨대' 찾는 기업 늘었다</h3>
-                  <p class="date">2021.10.08</p>
-                  <p class="txt">무림, 종이 빨대 부착용 비닐도 친환경 종이로 개발 (출처: 아시아경제)</p>
-                </div>
-              </a>
-            </li>
-          </ul>
-          <div class="btns center">
-            <a href="" class="btn large transition">네오프레 소식 더보기</a>
-          </div>
-        </div>
-      </article>
-      <!-- news end -->
-      <div id="cs">
-        <div class="contents">
-          <ul>
-            <li>
-              <a href="">
-                <div class="txtBox">
-                  <strong>온라인 문의</strong>
-                  <p>궁금하신 사항을 문의 하실 수 있습니다.</p>
-                </div>
-                <div class="btn">
-                  문의하기
-                  <span class="material-icons">east</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div class="txtBox">
-                  <strong>담당자 정보</strong>
-                  <p>업무 담당자를 확인 하실 수 있습니다.</p>
-                </div>
-                <div class="btn">
-                  정보확인
-                  <span class="material-icons">east</span>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- customer end -->
-    </main>
-    <footer id="footer">
-      <div class="contents">
-        <div class="addressBox">
-          <h1 class="logo">
-            <img src="../images/layout/main_footer_logo.png" alt="" />
-          </h1>
-          <address>
-            <p class="info">
-              <span>서울특별시 강남구 강남대로 656(신사동)</span>
-              <span>TEL : 02. 3485. 1500 </span>
-              <span>FAX : 02. 3443. 2997</span>
-              <a href="">개인정보 처리방침</a>
-            </p>
-            <p class="copyright">COPYRIGHT© 2021 MOORIM PAPER. ALL RIGHT RESERVED</p>
-          </address>
-        </div>
-        <a href="" class="link">
-          무림페이퍼로이동
-          <span class="material-icons">east</span>
-        </a>
-      </div>
-    </footer>
-  </body>
-</html>
+    </div>
+  </article>
+  <!-- news end -->
+  <div id="cs">
+    <div class="contents">
+      <ul>
+        <li>
+          <a href="">
+            <div class="txtBox">
+              <strong>온라인 문의</strong>
+              <p>궁금하신 사항을 문의 하실 수 있습니다.</p>
+            </div>
+            <div class="btn">
+              문의하기
+              <span class="material-icons">east</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="txtBox">
+              <strong>담당자 정보</strong>
+              <p>업무 담당자를 확인 하실 수 있습니다.</p>
+            </div>
+            <div class="btn">
+              정보확인
+              <span class="material-icons">east</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- customer end -->
+</main>
+<? include("../include/footer.html") ?>
