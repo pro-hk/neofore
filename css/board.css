@@ -62,7 +62,11 @@
 
 .faqBox ul li dl dt:hover .icon:before, .faqBox ul li dl dt:hover .icon:after { background-color: #1dcb5d; }
 
-.faqBox ul li dl dt .category { width: 150px; height: 100px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.faqBox ul li dl dt:hover .category, .faqBox ul li dl dt:hover .subject { color: #1dcb5d; }
+
+.faqBox ul li dl dt .category { width: 150px; height: 100px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-transition: 0.25s; transition: 0.25s; }
+
+.faqBox ul li dl dt .subject { -webkit-transition: 0.25s; transition: 0.25s; }
 
 .faqBox ul li dl dt .icon { margin-left: auto; width: 100px; height: 100px; position: relative; }
 

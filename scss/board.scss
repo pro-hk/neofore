@@ -187,11 +187,19 @@
             .icon:after {
               background-color: $main-color;
             }
+            .category,
+            .subject {
+              color: $main-color;
+            }
           }
           .category {
             width: 150px;
             height: 100px;
             @include flexCenter();
+            transition: 0.25s;
+          }
+          .subject {
+            transition: 0.25s;
           }
           .icon {
             margin-left: auto;
