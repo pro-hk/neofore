@@ -24,6 +24,10 @@
   }
   th {
     text-align: left;
+    &.content {
+      vertical-align: top;
+      // 세로정렬
+    }
     &.even {
       padding-left: 50px;
     }

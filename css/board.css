@@ -12,6 +12,8 @@
 
 .board th { text-align: left; }
 
+.board th.content { vertical-align: top; }
+
 .board th.even { padding-left: 50px; }
 
 .board input[type="text"], .board textarea { border: none; border-bottom: 1px solid whitesmoke; width: 100%; height: 40px; outline: none; -webkit-transition: 0.25s; transition: 0.25s; }
