@@ -1,178 +1,231 @@
 @import "vars";
 @import "mixins";
 
-.container {
-  margin: 0 auto;
-  width: 1440px;
-  .head {
-    padding-top: 200px;
-    .location {
-      display: flex;
-      align-items: center;
-      color: $border-color;
-      margin-bottom: 20px;
-      span,
-      a {
-        font-size: $normal-size;
-        margin-right: 20px;
-        position: relative;
-        &:after {
-          content: ">";
-          position: absolute;
-          right: -15px;
-          top: -2px;
-        }
-      }
-      a:nth-of-type(2) {
-        text-decoration: underline;
-        &:after {
-          display: none;
-        }
-      }
+.boardBox {
+  // color: $border-color;
+  border-top: 1px solid $border-color;
+  margin-top: 100px;
+  .require {
+    color: #f00;
+  }
+  .info {
+    padding: 50px 0;
+    p {
+      line-height: 1.5;
     }
-    h2 {
-      font-size: $x-large-size;
-      font-weight: 700;
-      margin-bottom: 30px;
+  }
+}
+.board {
+  width: 100%;
+  border-top: 1px solid $main-color;
+  th,
+  td {
+    padding: 20px 10px;
+  }
+  th {
+    text-align: left;
+    &.even {
+      padding-left: 50px;
     }
-    .list {
+  }
+  input[type="text"],
+  textarea {
+    border: none;
+    border-bottom: 1px solid darken($light-gray-color, 0);
+    width: 100%;
+    height: 40px;
+    outline: none;
+    transition: 0.25s;
+    &:focus,
+    &:hover {
+      border-bottom-color: $text-color;
+    }
+  }
+  select {
+    width: calc(40 / 90 * 100%);
+    border: none;
+    border-bottom: 1px solid $border-color;
+    padding: 10px;
+    appearance: none;
+    position: relative;
+    background: url(../images/common/keyboard_arrow_down_black_24dp.svg) right 10px top 50% no-repeat;
+    // &:after {
+    //   font-family: "material icons";
+    //   content: "\e5cf";
+    //   position: absolute;
+    //   right: 0;
+    //   top: 50%;
+  }
+  .address {
+    .addr01 {
+      width: calc(4 / 9 * 100%);
       display: flex;
-      margin-bottom: 100px;
-      li {
-        padding: 10px 20px;
-        color: $border-color;
+      margin-bottom: 15px;
+      button {
+        @include flexCenter();
+        border: 2px solid $border-color;
         border-radius: 100px;
-        color: $border-color;
-        transition: 0.25s;
-        &:last-child {
-          color: $white-color;
-          background-color: $main-color;
+        color: $text-color;
+        padding: 0 20px;
+        white-space: nowrap;
+        margin-left: 15px;
+        // white-space : nowrap - 1줄
+        span {
+          margin-right: 15px;
+          color: $main-color;
         }
-        &:hover {
-          background-color: $light-gray-color;
-          &:last-child {
-            color: $border-color;
-          }
-        }
+      }
+    }
+    .addr02 {
+      display: flex;
+      justify-content: space-between;
+      .readonly {
+        width: calc(4 / 4.5 * 100% - 2%);
+        margin-right: 4%;
+      }
+    }
+    .readonly {
+      border: none;
+      background-color: $gray-color;
+      border-radius: 5px;
+      padding: 0 10px;
+      color: $white-color;
+      box-sizing: border-box;
+    }
+  }
+  textarea {
+    height: 300px;
+    resize: none;
+    background-color: $light-gray-color;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}
+
+.agreeBox {
+  border-top: 1px solid $border-color;
+  margin-top: 50px;
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  .agree {
+    .show {
+      display: flex;
+      margin-bottom: 20px;
+      align-items: center;
+      button {
+        margin-left: 20px;
+        padding: 5px 20px;
+        background-color: $text-color;
+        border-radius: 100px;
+        color: $white-color;
       }
     }
   }
-  .contents {
-    color: $border-color;
-    border-top: 2px solid #000;
-    .require {
-      color: red;
+  button[type="submit"] {
+    padding: 20px 40px;
+    background-color: $text-color;
+    border-radius: 100px;
+    color: $white-color;
+  }
+}
+
+.checkbox {
+  display: flex;
+  input {
+    display: none;
+  }
+  input:checked ~ .label:before {
+    background-color: $main-color;
+    border: none;
+    color: $white-color;
+    content: "\2713";
+    @include longShadow(darken($main-color, 20), right, 10);
+  }
+  .label {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    &:before {
+      content: "";
+      @include flexCenter();
+      @include box(20px);
+      overflow: hidden;
+      border: 1px solid $gray-color;
+      border-radius: 3px;
+      margin-right: 5px;
+      box-sizing: border-box;
     }
-    p {
-      padding: 20px 0;
-      line-height: 2;
-    }
-    table {
-      margin-top: 30px;
-      width: 100%;
-      tr {
-        height: 90px;
-        th {
-          text-align: left;
-          &.right {
-            text-align: center;
+  }
+}
+
+.faqBox {
+  ul {
+    li {
+      &.on {
+        dt {
+          .icon:before {
+            transform: rotate(45deg);
+          }
+          .icon:after {
+            transform: rotate(-45deg);
           }
         }
       }
-      td {
-        &.add {
+      dl {
+        dt {
           display: flex;
-          a {
+          align-items: center;
+          border-bottom: 1px solid $light-gray-color;
+          cursor: pointer;
+          &:hover {
+            .icon:before,
+            .icon:after {
+              background-color: $main-color;
+            }
+          }
+          .category {
+            width: 150px;
+            height: 100px;
             @include flexCenter();
-            width: 220px;
-            border: 1px solid $border-color;
-            border-radius: 100px;
-            color: $text-color;
-            span {
-              margin-right: 5px;
-              color: $main-color;
+          }
+          .icon {
+            margin-left: auto;
+            @include box(100px);
+            position: relative;
+            &:before {
+              @include pseudo();
+              top: 50%;
+              left: 50%;
+              margin-left: -3px;
+              width: 20px;
+              height: 2px;
+              background-color: #000;
+              transform: rotate(-45deg);
+              transition: 0.25s;
+            }
+            &:after {
+              @include pseudo();
+              top: 50%;
+              right: 50%;
+              margin-right: -3px;
+              width: 20px;
+              height: 2px;
+              background-color: #000;
+              transform: rotate(45deg);
+              transition: 0.25s;
             }
           }
         }
-        .flex {
-          border-top: 40px solid $white-color;
-          display: flex;
-          align-items: center;
-          width: 100%;
-          input[type="file"] {
-            width: 90px;
+        dd {
+          background-color: $light-gray-color;
+          padding: 50px 50px 50px 150px;
+          line-height: 1.5;
+          display: none;
+          p {
+            margin-bottom: 20px;
           }
         }
-        input[type="text"] {
-          width: 100%;
-          box-sizing: border-box;
-          border: none;
-          border-bottom: 1px solid $border-color;
-          padding: 10px;
-          transition: 0.25s;
-          &.address {
-            background-color: $border-color;
-            border-radius: 5px;
-            font-weight: 600;
-            padding: 20px;
-            margin-right: 20px;
-          }
-          &.otherAddress {
-            padding: 20px;
-            font-weight: 600;
-          }
-          &:hover {
-            border-bottom: 1px solid $text-color;
-          }
-        }
-        select {
-          width: 100%;
-          border: none;
-          border-bottom: 1px solid $border-color;
-          padding: 10px;
-        }
-        textarea {
-          width: 100%;
-          height: 300px;
-          border: none;
-          border-bottom: 1px solid $border-color;
-          &:hover {
-            border-bottom: 1px solid $text-color;
-          }
-        }
-      }
-    }
-  }
-  .bottom {
-    border-top: 1px solid $border-color;
-    margin-top: 20px;
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    ul {
-      li {
-        color: $border-color;
-        line-height: 1.5;
-        // input {
-        //   border: 1px solid $border-color;
-        //   &:checked {
-        //     background-color: $main-color;
-        //   }
-        // }
-        span {
-          color: $text-color;
-          text-decoration: underline;
-        }
-      }
-    }
-    .btns {
-      button {
-        background-color: $gray-color;
-        padding: 20px 40px;
-        color: $white-color;
-        border-radius: 100px;
-        font-weight: 600;
-        font-size: $medium-size;
       }
     }
   }
