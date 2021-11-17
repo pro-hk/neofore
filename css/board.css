@@ -71,3 +71,17 @@
 .faqBox ul li dl dd { background-color: #f5f5f5; padding: 50px 50px 50px 150px; line-height: 1.5; display: none; }
 
 .faqBox ul li dl dd p { margin-bottom: 20px; }
+
+.contactBox ul { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+.contactBox ul li { width: 33.3333%; border: 1px solid #d9d9d9; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 30px 0px 70px 30px; position: relative; color: #767676; }
+
+.contactBox ul li h2 { font-size: 2.4rem; margin-bottom: 40px; }
+
+.contactBox ul li > span { display: block; width: 40px; height: 2px; background-color: #1dcb5d; margin-bottom: 30px; }
+
+.contactBox ul li a { display: block; font-size: 2.4rem; color: #111111; margin-top: 20px; font-weight: 500; }
+
+.contactBox ul li a span { font-weight: 300; }
+
+.contactBox ul li img { position: absolute; right: 20px; bottom: 50px; }
