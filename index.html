@@ -4,8 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
+    <title>neoforet</title>
+    <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.5/mobile-detect.min.js"></script>
+  </head>
+  <body>
+    <script>
+      const md = new MobileDetect(window.navigator.userAgent);
+      console.log(md.mobile());
+      if (md.mobile()) {
+        location.href = "m/html";
+      } else {
+        location.href = "pc/html";
+      }
+    </script>
+  </body>
+=======
     <meta http-equiv="refresh" content="0; url=html" />
     <title>Document</title>
   </head>
   <body></body>
+>>>>>>> 9eaca15e14bb9340c04ec48a00cd44a72560c8ee
 </html>
