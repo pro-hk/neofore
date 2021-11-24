@@ -1,3 +1,5 @@
+Splitting();
+
 const mainVisualSlider = new Swiper("#mainVisual", {
   autoplay: true,
   speed: 1000,
@@ -23,3 +25,6 @@ const productSlider = new Swiper("#product .list", {
     nextEl: "#product .next",
   },
 });
+
+gsap.from("#mainVisual .slogan .main .char", { opacity: 0, x: 300, skewX: -45, ease: "power4", duration: 1, stagger: 0.1 });
+gsap.from("#mainVisual .slogan .sub .char", { opacity: 0, x: 300, skewX: -45, ease: "power4", duration: 1, delay: 1, stagger: 0.1 });
