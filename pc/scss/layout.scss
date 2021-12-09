@@ -32,18 +32,18 @@ button {
   z-index: 100;
   color: $white-color;
   top: 0;
-  &:hover {
-    color: $text-color;
-    background-color: $white-color;
-    #logo a {
-      .color {
-        display: block;
-      }
-      .white {
-        display: none;
-      }
-    }
-  }
+  // &:hover {
+  //   color: $text-color;
+  //   background-color: $white-color;
+  //   #logo a {
+  //   .color {
+  //     display: block;
+  //   }
+  //   .white {
+  //   display: none;
+  //   }
+  //   }
+  // }
   // display: flex;
   // justify-content: space-between;
   #logo {
@@ -65,14 +65,15 @@ button {
       > li {
         &:hover {
           > a {
-            color: $hover-color;
+            // color: $hover-color;
+            background-color: $main-color;
             &:after {
               transform: scaleX(1);
             }
           }
-          .depth02 {
-            display: flex;
-          }
+          // .depth02 {
+          //   display: flex;
+          // }
         }
         > a {
           display: flex;
@@ -86,28 +87,38 @@ button {
           font-weight: 500;
           &:after {
             height: 3px;
-            top: 65px;
-            right: 50px;
-            left: 50px;
+            bottom: 0;
+            right: 20px;
+            left: 20px;
             transform: scaleX(0);
             transition: 0.5s ease;
-            background-color: $main-color;
-            transform-origin: 0 50%;
+            background-color: $white-color;
+            transform-origin: 50% 50%;
             @include pseudo();
           }
         }
         .depth02 {
           display: none;
-          width: 100%;
-          position: absolute;
+          // width: 100%;
+          // position: absolute;
           left: 0;
-          background-color: $light-gray-color;
-          justify-content: center;
+          background-color: $main-color;
+          // justify-content: center;
+          border-radius: 0 0 10px 10px;
+          padding: 15px 10px;
           li {
+            &:hover {
+              a {
+                //color: $hover-color;
+                background-color: darken($main-color, 10);
+                border-radius: 5px;
+              }
+            }
             a {
               display: flex;
               height: 60px;
-              padding: 0 30px;
+              padding: 15px 0;
+              transition: 0.25s;
               justify-content: center;
               align-items: center;
             }

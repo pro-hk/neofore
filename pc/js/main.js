@@ -23,3 +23,19 @@ const productSlider = new Swiper("#product .list", {
     nextEl: "#product .next",
   },
 });
+
+const gnbList = $("#gnb .list > li");
+gnbList.on("mouseenter", function () {
+  $(this).find(".depth02").stop().slideDown(200);
+});
+gnbList.on("mouseleave", function () {
+  $(this).find(".depth02").stop().slideUp(200);
+});
+
+const faqList = $(".faqBox ul li");
+faqList.on("click", function () {
+  $(this).toggleClass("on");
+  $(this).siblings("li").removeClass("on");
+  $(this).find("dd").stop().slideToggle();
+  $(this).siblings("li").find("dd").stop().slideUp();
+});
