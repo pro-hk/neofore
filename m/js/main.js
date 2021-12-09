@@ -31,12 +31,6 @@ const newsSlider = new Swiper("#news .contents", {
   spaceBetween: 10,
 });
 
-function add(a, b) {
-  return a + b * 2 + 10;
-}
-const sum = add(20, 30);
-console.log(sum);
-
 const btnAll = document.querySelector("#header .all");
 const gnb = document.querySelector("#gnb");
 const btnClose = document.querySelector("#gnb .close");
@@ -49,4 +43,22 @@ btnClose.addEventListener("click", () => {
   gnb.classList.remove("on");
 });
 
-//f(x,y) = x+y*3; f(3,5) = 18
+const gnbList = $("#gnb .list > li");
+const depth01 = gnbList.children("a:not(.only)");
+// const depth01 = gnbList.children("a").not(".only");
+depth01.on("click", function (e) {
+  e.preventDefault();
+  $(this).siblings(".depth02").stop().slideToggle();
+  $(this).parent().siblings("li").find(".depth02").stop().slideUp();
+  // return fault;
+});
+
+const header = $("#header");
+$(window).on("scroll", function () {
+  const st = $(window).scrollTop();
+  if (st > 0 || !header.hasClass("scroll")) {
+    header.addClass("scroll");
+  } else {
+    header.removeClass("scroll");
+  }
+});

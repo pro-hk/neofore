@@ -8,7 +8,13 @@ button { background: none; border: none; outline: none; }
 
 .hidden { display: none; }
 
-#header { width: 100%; position: fixed; z-index: 100; color: #fff; top: 0; }
+#header { width: 100%; height: 100px; position: fixed; z-index: 100; color: #fff; top: 0; }
+
+#header.scroll { background-color: #fff; color: #111; -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); -webkit-transition: 0.25s; transition: 0.25s; }
+
+#header.scroll #logo a .color { display: block; }
+
+#header.scroll #logo a .white { display: none; }
 
 #header #logo { position: absolute; left: 50px; }
 
@@ -18,7 +24,7 @@ button { background: none; border: none; outline: none; }
 
 #header #gnb .list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-#header #gnb .list > li:hover > a { background-color: #1dcb5d; }
+#header #gnb .list > li:hover > a { background-color: #1dcb5d; color: #fff; }
 
 #header #gnb .list > li:hover > a:after { -webkit-transform: scaleX(1); transform: scaleX(1); }
 
@@ -26,7 +32,7 @@ button { background: none; border: none; outline: none; }
 
 #header #gnb .list > li > a:after { height: 3px; bottom: 0; right: 20px; left: 20px; -webkit-transform: scaleX(0); transform: scaleX(0); -webkit-transition: 0.5s ease; transition: 0.5s ease; background-color: #fff; -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; content: ""; display: block; position: absolute; }
 
-#header #gnb .list > li .depth02 { display: none; left: 0; background-color: #1dcb5d; border-radius: 0 0 10px 10px; padding: 15px 10px; }
+#header #gnb .list > li .depth02 { display: none; left: 0; background-color: #1dcb5d; border-radius: 0 0 10px 10px; padding: 15px 10px; color: #fff; }
 
 #header #gnb .list > li .depth02 li:hover a { background-color: #179e49; border-radius: 5px; }
 

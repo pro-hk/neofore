@@ -24,6 +24,8 @@ const productSlider = new Swiper("#product .list", {
   },
 });
 
+gsap.from("#mainVisual .slogan .main", { opacity: 0, duration: 2, stagger: 0.2 });
+
 const gnbList = $("#gnb .list > li");
 gnbList.on("mouseenter", function () {
   $(this).find(".depth02").stop().slideDown(200);
@@ -38,4 +40,14 @@ faqList.on("click", function () {
   $(this).siblings("li").removeClass("on");
   $(this).find("dd").stop().slideToggle();
   $(this).siblings("li").find("dd").stop().slideUp();
+});
+
+const header = $("#header");
+$(window).on("scroll", function () {
+  const st = $(window).scrollTop();
+  if (st > 0 || !header.hasClass("scroll")) {
+    header.addClass("scroll");
+  } else {
+    header.removeClass("scroll");
+  }
 });
