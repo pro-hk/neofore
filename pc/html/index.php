@@ -7,8 +7,8 @@
       <li class="visual03 swiper-slide"></li>
     </ul>
     <div class="slogan">
-      <p class="main">Return to forest</p>
-      <p class="sub">숲으로 돌아가는 종이, 네오포레</p>
+      <p class="main" data-splitting>Return to forest</p>
+      <p class="sub" data-splitting>숲으로 돌아가는 종이, 네오포레</p>
       <a href="#">브랜드 스토리 자세히보기<span class="material-icons">east</span></a>
       <div class="pagination"></div>
     </div>

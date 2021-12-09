@@ -1,3 +1,5 @@
+Splitting();
+
 const mainVisualSlider = new Swiper("#mainVisual", {
   autoplay: true,
   speed: 1000,
@@ -24,7 +26,19 @@ const productSlider = new Swiper("#product .list", {
   },
 });
 
-// gsap.from("#mainVisual .slogan .main", { opacity: 0, duration: 2, stagger: 0.2 });
+gsap.from("#mainVisual .slogan .main .char", {
+  opacity: 0,
+  y: -150,
+  duration: 2,
+  stagger: 0.2,
+  ease: "bounce",
+});
+gsap.from("#mainVisual .slogan .sub .char", {
+  y: -100,
+  duration: 5,
+  stagger: 0.1,
+  ease: "bounce",
+});
 
 const gnbList = $("#gnb .list > li");
 gnbList.on("mouseenter", function () {
