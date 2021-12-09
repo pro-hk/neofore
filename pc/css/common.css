@@ -1,0 +1,7 @@
+.checkbox input { display: none; }
+
+.checkbox input:checked ~ .label:before { background-color: #1dcb5d; border: none; content: "\2713"; color: #fff; text-shadow: 1px 1px 0px #179e49,2px 2px 0px #179e49,3px 3px 0px #179e49,4px 4px 0px #179e49,5px 5px 0px #179e49,6px 6px 0px #179e49,7px 7px 0px #179e49,8px 8px 0px #179e49,9px 9px 0px #179e49,10px 10px 0px #179e49,11px 11px 0px #179e49,12px 12px 0px #179e49,13px 13px 0px #179e49,14px 14px 0px #179e49,15px 15px 0px #179e49,16px 16px 0px #179e49,17px 17px 0px #179e49,18px 18px 0px #179e49,19px 19px 0px #179e49,20px 20px 0px #179e49;; }
+
+.checkbox .label { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+.checkbox .label:before { content: ""; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 24px; height: 24px; border: 2px solid #333; border-radius: 3px; margin-right: 6px; overflow: hidden; -webkit-box-sizing: border-box; box-sizing: border-box; }

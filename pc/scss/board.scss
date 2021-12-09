@@ -137,35 +137,6 @@
   }
 }
 
-.checkbox {
-  display: flex;
-  input {
-    display: none;
-  }
-  input:checked ~ .label:before {
-    background-color: $main-color;
-    border: none;
-    color: $white-color;
-    content: "\2713";
-    @include longShadow(darken($main-color, 20), right, 10);
-  }
-  .label {
-    display: flex;
-    align-items: center;
-    user-select: none;
-    &:before {
-      content: "";
-      @include flexCenter();
-      @include box(20px);
-      overflow: hidden;
-      border: 1px solid $gray-color;
-      border-radius: 3px;
-      margin-right: 5px;
-      box-sizing: border-box;
-    }
-  }
-}
-
 .faqBox {
   ul {
     li {

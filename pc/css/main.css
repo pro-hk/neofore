@@ -112,4 +112,16 @@
 
 #main #cs .contents ul li a .btn span { color: #1dcb5d; margin-left: 10px; }
 
+.popup { background-color: #fff; position: fixed; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 10; padding: 10px; display: none; }
+
+.popup .img { padding: 50px; }
+
+.popup .btns { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.popup .btns label { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.popup .btns label span { margin-left: 10px; }
+
+.popup .btns button { padding: 10px 20px; background-color: #ccc; border-radius: 5px; }
+
 @media screen and (max-width: 1440px) { #main #news .contents { width: 100%; } }

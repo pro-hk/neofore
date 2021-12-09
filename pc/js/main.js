@@ -24,7 +24,7 @@ const productSlider = new Swiper("#product .list", {
   },
 });
 
-gsap.from("#mainVisual .slogan .main", { opacity: 0, duration: 2, stagger: 0.2 });
+// gsap.from("#mainVisual .slogan .main", { opacity: 0, duration: 2, stagger: 0.2 });
 
 const gnbList = $("#gnb .list > li");
 gnbList.on("mouseenter", function () {
@@ -51,3 +51,29 @@ $(window).on("scroll", function () {
     header.removeClass("scroll");
   }
 });
+
+const popup = $(".popup");
+const btnClose = popup.find(".btnClose");
+const checkbox = popup.find("#checkbox");
+
+// let isCheck = checkbox.is(":checked");
+// checkbox.on("change", function () {
+//   isChecked = $(this).is(":checked");
+// });
+btnClose.on("click", function () {
+  if (checkbox.is(":checked")) {
+    Cookies.set("oneday", "one", { expires: 1 });
+  }
+  gsap.to(popup, {
+    top: -600,
+    duration: 1,
+    ease: "back.in",
+    // in : 점점 빠르게 ; out : 점점 느리게 ; inOut : 점점 빠르다가 점점 느리게
+  });
+});
+
+if (Cookies.get("oneday") === "one") {
+  popup.hide();
+} else {
+  popup.show();
+}

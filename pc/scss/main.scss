@@ -294,6 +294,36 @@
 }
 // main end
 
+.popup {
+  background-color: $white-color;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 10px;
+  display: none;
+  .img {
+    padding: 50px;
+  }
+  .btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    label {
+      display: flex;
+      span {
+        margin-left: 10px;
+      }
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #ccc;
+      border-radius: 5px;
+    }
+  }
+}
+
 @media screen and (max-width: 1440px) {
   #main {
     #news {
