@@ -78,10 +78,13 @@ btnClose.on("click", function () {
   if (checkbox.is(":checked")) {
     Cookies.set("oneday", "one", { expires: 1 });
   }
-  gsap.to(popup, {
+  gsap.to(popup.find(".inner"), {
     top: -600,
     duration: 1,
     ease: "back.in",
+    onComplete: function () {
+      popup.remove();
+    },
     // in : 점점 빠르게 ; out : 점점 느리게 ; inOut : 점점 빠르다가 점점 느리게
   });
 });

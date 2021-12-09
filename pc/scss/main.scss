@@ -295,31 +295,38 @@
 // main end
 
 .popup {
-  background-color: $white-color;
   position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  padding: 10px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   display: none;
-  .img {
-    padding: 50px;
-  }
-  .btns {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    label {
-      display: flex;
-      span {
-        margin-left: 10px;
-      }
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  .inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    .img {
+      padding: 50px;
     }
-    button {
-      padding: 10px 20px;
-      background-color: #ccc;
-      border-radius: 5px;
+    .btns {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      label {
+        display: flex;
+        span {
+          margin-left: 10px;
+        }
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #ccc;
+        border-radius: 5px;
+      }
     }
   }
 }

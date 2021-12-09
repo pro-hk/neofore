@@ -112,16 +112,18 @@
 
 #main #cs .contents ul li a .btn span { color: #1dcb5d; margin-left: 10px; }
 
-.popup { background-color: #fff; position: fixed; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 10; padding: 10px; display: none; }
+.popup { position: fixed; left: 0; right: 0; top: 0; bottom: 0; display: none; background-color: rgba(0, 0, 0, 0.5); z-index: 10; }
 
-.popup .img { padding: 50px; }
+.popup .inner { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); padding: 10px; }
 
-.popup .btns { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.popup .inner .img { padding: 50px; }
 
-.popup .btns label { display: -webkit-box; display: -ms-flexbox; display: flex; }
+.popup .inner .btns { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
-.popup .btns label span { margin-left: 10px; }
+.popup .inner .btns label { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
-.popup .btns button { padding: 10px 20px; background-color: #ccc; border-radius: 5px; }
+.popup .inner .btns label span { margin-left: 10px; }
+
+.popup .inner .btns button { padding: 10px 20px; background-color: #ccc; border-radius: 5px; }
 
 @media screen and (max-width: 1440px) { #main #news .contents { width: 100%; } }

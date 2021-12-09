@@ -137,15 +137,17 @@
 </main>
 
 <aside class="popup">
-  <div class="img">
-    <img src="../images/main/popup.png" alt="">
-  </div>
-  <div class="btns">
-    <label class="checkbox">
-      <input type="checkbox" name="" id="checkbox">
-      <span class="label">오늘 하루 이 창을 열지 않기</span>
-    </label>
-    <button class="btnClose">닫기</button>
+  <div class="inner">
+    <div class="img">
+      <img src="../images/main/popup.png" alt="">
+    </div>
+    <div class="btns">
+      <label class="checkbox">
+        <input type="checkbox" name="" id="checkbox">
+        <span class="label">오늘 하루 이 창을 열지 않기</span>
+      </label>
+      <button class="btnClose">닫기</button>
+    </div>
   </div>
 </aside>
 
